@@ -204,12 +204,11 @@ section h2 {
   text-decoration: underline;
 }
 
-/* Responsive Map */
+/* Responsive Map - keeps desktop size */
 .map-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
+  height: 450px;       /* Desktop height similar to original */
   overflow: hidden;
   margin-top: 1rem;
   border-radius: 10px;
@@ -273,9 +272,10 @@ footer {
     transform: none;
   }
 
-  /* Taller map ratio on tablets */
+  /* Tablet map: responsive 16:9 */
   .map-container {
-    padding-bottom: 65%;
+    height: 0;
+    padding-bottom: 56.25%;
   }
 }
 
@@ -297,7 +297,7 @@ footer {
     margin-right: 8px;
   }
 
-  /* Even taller map on phones */
+  /* Phone map: taller for better visibility */
   .map-container {
     padding-bottom: 75%;
   }

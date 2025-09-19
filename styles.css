@@ -204,6 +204,25 @@ section h2 {
   text-decoration: underline;
 }
 
+/* Responsive Map */
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -253,6 +272,11 @@ footer {
     padding: 1.5rem;
     transform: none;
   }
+
+  /* Taller map ratio on tablets */
+  .map-container {
+    padding-bottom: 65%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -271,5 +295,10 @@ footer {
   header .logo img {
     height: 50px;
     margin-right: 8px;
+  }
+
+  /* Even taller map on phones */
+  .map-container {
+    padding-bottom: 75%;
   }
 }

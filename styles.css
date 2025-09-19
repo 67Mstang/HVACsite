@@ -204,11 +204,11 @@ section h2 {
   text-decoration: underline;
 }
 
-/* Responsive Map - keeps desktop size */
+/* Responsive Map - larger desktop height */
 .map-container {
   position: relative;
   width: 100%;
-  height: 450px;       /* Desktop height similar to original */
+  height: 600px;       /* increased desktop height */
   overflow: hidden;
   margin-top: 1rem;
   border-radius: 10px;

@@ -54,6 +54,7 @@ header {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(8px);
+  flex-wrap: wrap;
 }
 
 header .logo {
@@ -64,11 +65,12 @@ header .logo {
 header .logo img {
   height: 80px;
   margin-right: 15px;
+  max-width: 100%;
 }
 
 header h1 {
   font-size: 2rem;
-  color: rgba(33, 150, 243, 0.95); /* changed to card blue */
+  color: rgba(33, 150, 243, 0.95);
 }
 
 nav ul {
@@ -112,8 +114,7 @@ nav ul li a:hover {
 
 .hero-content h2,
 .hero-content p {
-  color: rgba(33, 150, 243, 0.95); /* changed to card blue */
-  text-shadow: none; /* removed shadow for clarity */
+  color: rgba(33, 150, 243, 0.95);
   margin-bottom: 1rem;
 }
 
@@ -144,10 +145,11 @@ nav ul li a:hover {
 }
 
 .card {
-  background: rgba(33, 150, 243, 0.95); /* unified light blue */
+  background: rgba(33, 150, 243, 0.95);
   border-radius: 15px;
   padding: 2rem;
   max-width: 900px;
+  width: 100%;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   transform: translateY(-30px);
   transition: transform 0.3s ease;
@@ -176,14 +178,14 @@ section h2 {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  border-left: 5px solid #ff6600; /* orange accent */
+  border-left: 5px solid #ff6600;
   background: rgba(255,255,255,0.1);
   border-radius: 8px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .service-item:nth-child(even) {
-  border-left-color: #8bc34a; /* green accent alternate */
+  border-left-color: #8bc34a;
 }
 
 .service-item:hover {
@@ -211,4 +213,63 @@ footer {
   margin-top: 2rem;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+/* -------------------------
+   Responsive Design
+-------------------------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  header .logo img {
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 1.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  header .logo img {
+    height: 50px;
+    margin-right: 8px;
+  }
 }
